@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio Website">
+<meta name="author" content="Arpit">
+<title>Arpit Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- I don't know how to make toggle to change into dark mode or light mode so I'm somehow doing it and it's getting complicated -->
+<header>
+    <h1>Arpit's Portfolio</h1>
+  <ruby id="icon">☀️
+  <rt>Theme-mode</rt>
+  <rp>Theme-mode</rp>
+  </ruby>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+    <h2>Welcome</h2>
+    <p>
+        Welcome to my portfolio!
+I'm an aspiring web developer currently learning HTML, CSS, JavaScript, and Git. I enjoy building responsive and accessible websites while continuously expanding my skills through hands on projects and learning.
+    </p>
+</section>
+
+
+<!-- I know this hr tag from my personal work -->
+<hr>
+<br>
+  <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="about.html">Learn more <u><strong>About</strong></u> me</a></li>
+            <li><a href="project.html"><u>Projects</u></a></li>
+            <li><a href="contact.html">For queries <u><strong>Contact</strong></u> me</a></li>
+        </ul>
+    </nav>
+
+</main>
+<footer>
+    <p>&copy; 2026 Arpit. All Rights Reserved.</p>
+</footer>
+
+<!-- watched thi video "https://youtu.be/9LZGB3OLXNQ?si=fj83ai6kI__ZdEYM" to learn the dark and light mode switch-->
+<script>
+const icon = document.getElementById("icon");
+
+// Apply saved theme when page loads
+if(localStorage.getItem("theme") === "light"){
+    document.body.classList.add("lightmode");
+}
+
+icon.onclick = function () {
+
+    document.body.classList.toggle("lightmode");
+
+    if (document.body.classList.contains("lightmode")) {
+        localStorage.setItem("theme", "light");
+        icon.childNodes[0].textContent = "🌙";
+    } else {
+        localStorage.setItem("theme", "dark");
+        icon.childNodes[0].textContent = "☀️";
+    }
+}
+// it also doesn't change icon//
+</script>
+<!--took a little help from chatgpt-->
+
+<!--and i also had to copy-paste this in every different html files-->
+
+
+</body>
+</html>
