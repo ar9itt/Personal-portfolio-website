@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Arpit Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <h1>Arpit's Portfolio</h1>
+    
+</header>
+<main>
+<section>
+    
+<div class="projects-grid">
+
+    <article>
+        <h3>Portfolio Website</h3>
+        <p>Responsive portfolio using HTML5 and CSS3.</p>
+    </article>
+
+    <article>
+        <h3>Landing Page</h3>
+        <p>Modern landing page built with semantic HTML.</p>
+    </article>
+
+    <article>
+        <h3>Responsive Web Design</h3>
+        <p>Mobile-friendly layouts using CSS Grid and Flexbox.</p>
+    </article>
+
+</div>
+</section>
+
+
+<hr>
+<br>
+  <nav aria-label="Main Navigation">
+      <ul>
+          <li><a href="index.html"><u>Home</u></a></li>
+<li><a href="about.html"><u>About</u></a></li>
+          <li><a href="contact.html"><u>Contact</u></a></li>
+      </ul>
+  </nav>
+  
+</main>
+
+<script>
+const icon = document.getElementById("icon");
+
+if(localStorage.getItem("theme") === "light"){
+    document.body.classList.add("lightmode");
+}
+
+icon.onclick = function () {
+
+    document.body.classList.toggle("lightmode");
+
+    if(document.body.classList.contains("lightmode")){
+        localStorage.setItem("theme", "light");
+    } else {
+        localStorage.setItem("theme", "dark");
+    }
+}
+</script>
+
+</body>
+</html>
