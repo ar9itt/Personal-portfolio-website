@@ -1,0 +1,161 @@
+/*CSS Variables */
+:root {
+    --bg-color: #121212;
+    --card-color: #1e1e1e;
+    --text-color: #ffffff;
+    --accent-color: #4f8cff;
+    --hover-color: #6ba0ff; 
+} 
+
+.lightmode {
+--bg-color: #f8f4ee;
+--card-color: #ffffff;
+--text-color: #1a1a1a;
+--accent-color: #f97316;
+}
+/*-- i did something wrong and the theme colour change icon is not moving !_!*/
+#icon {
+    cursor: pointer;
+    justify-content: right;
+    align-items: center;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background: var(--card-color);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 15px;
+}
+
+/* Flexbox Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Main Content */
+main {
+    /*max-width: 1100px;*/
+   /* margin: auto; */
+    padding: 30px 20px;
+    flex: 1;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+/* CSS Grid for Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+article {
+    background: var(--card-color);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+
+/* Skills List */
+ul {
+    padding-left: 20px;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--hover-color);
+}
+
+/* Footer */
+footer {
+    background: var(--card-color);
+    text-align: center;
+    padding: 20px;
+    
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
