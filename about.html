@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Arpit Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Arpit's Portfolio</h1>
+     
+</header>
+
+<main>
+    <section>
+        <h2>About Me</h2>
+
+        <p>
+            Hello! I'm Arpit, an aspiring web developer with a strong interest in creating responsive, accessible, and user-friendly websites. I am currently learning HTML, CSS, JavaScript, and Git while building projects to strengthen my practical skills.
+
+Along with my technical learning, I bring a creative mindset that helps me approach problems from different perspectives and add thoughtful design to my work. I enjoy learning new technologies, improving my skills, and turning ideas into functional web experiences.
+        </p>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript (Basic)</li>
+            <li>Git (Basic)</li>
+            <li>Github</li>
+            <li>Problem Solving</li>
+            <li>Teamwork</li>
+        </ul>
+    </section>
+   
+     <section>
+        <h2>Contact Info</h2>
+
+        <ul>
+            <li>Phone: +91 9369173795</li>
+            <li>Email: ar9itt@gmail.com</li>
+        </ul>
+    </section>
+   
+    <hr>
+    <br>
+    <nav aria-label="Main Navigation">
+<ul>
+<li><a href="index.html"><u>Home</u></a></li>
+
+<li><a href="project.html"><u>Projects</u></a></li>
+<li><a href="contact.html"><u>Contact</u></a></li>
+</ul>
+</nav>
+</main>
+
+
+<script>
+const icon = document.getElementById("icon");
+if(localStorage.getItem("theme") === "light"){
+    document.body.classList.add("lightmode");
+}
+
+icon.onclick = function () {
+
+    document.body.classList.toggle("lightmode");
+
+    if(document.body.classList.contains("lightmode")){
+        localStorage.setItem("theme", "light");
+    } else {
+        localStorage.setItem("theme", "dark");
+    }
+}
+</script>
+
+
+</body>
+</html>
